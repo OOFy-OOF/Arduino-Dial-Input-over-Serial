@@ -13,12 +13,20 @@ Only Windows support for now, executable builds are made using Auto-py-to-exe.
 <br>
 
 ## Installation:
-### 1. Upload the .ino file to the Arduino using Arduino IDE
+### 1. Download the .zip from Releases
+
+<img width="1323" height="364" alt="image" src="https://github.com/user-attachments/assets/1b0d386e-fed3-4f9d-81d4-ec2456391a6b" />
+
+### 2. Unzip on your PC, you should find these files inside the folder inside:
+
+<img width="656" height="122" alt="image" src="https://github.com/user-attachments/assets/284212c5-e7a5-4128-89b3-05610174bf64" />
+
+### 3. Upload the .ino file to the Arduino using Arduino IDE
 
 <img width="635" height="60" alt="image" src="https://github.com/user-attachments/assets/eb78ec93-98eb-428c-b4d9-50efd589c72c" />
 
 Close the IDE when complete.
-### 2. Run the .exe
+### 4. Run the .exe
 
 <img width="1037" height="93" alt="image" src="https://github.com/user-attachments/assets/4b22ff44-4318-4237-a39b-01c891b3d08e" />
 
