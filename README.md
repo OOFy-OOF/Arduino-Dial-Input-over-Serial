@@ -7,7 +7,7 @@ The switches used in my example are Omron B3WNs, and the potentiometer is a comm
 
 <img width="696" height="453" alt="image" src="https://github.com/user-attachments/assets/3c154c02-0140-45f7-8d87-53a98468e5f9" />
 
-Only Windows support for now, executable builds are made using Auto-py-to-exe.
+Only Windows support for now, executable builds are made using [Auto-py-to-exe](https://github.com/brentvollebregt/auto-py-to-exe).
 
 
 <br>
