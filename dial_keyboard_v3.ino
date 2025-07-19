@@ -3,6 +3,7 @@ const int modeButtonPin = 10;    // Button to switch modes (Letters/Numbers/Punc
 const int confirmButtonPin = 11; // Button to confirm selection
 const int escButtonPin = 12;     // Button for ESC/Backspace
 const int holdDelay = 300;       // Time to register a "hold" action
+const int doublePressDelay = 500; // Max time between presses to count as double press
 
 // Character sets for each mode (lowercase default)
 const char* modes[] = {
@@ -17,6 +18,10 @@ bool capsLock = false;            // Track uppercase state for letters
 int selectedCharIndex = 0;        
 int lastPrintedCharIndex = -1;    // Track last displayed character
 int lastPrintedMode = -1;         // Track last displayed mode
+
+// Variables for double press detection (now for mode button)
+unsigned long lastModePressTime = 0;
+bool modeSinglePress = false;
 
 void setup() {
   Serial.begin(9600);
@@ -49,6 +54,11 @@ void loop() {
   handleConfirmButton();
   handleEscButton();
 
+  // Check for double press timeout (mode button)
+  if (modeSinglePress && (millis() - lastModePressTime > doublePressDelay)) {
+    modeSinglePress = false;
+  }
+
   delay(100);
 }
 
@@ -64,21 +74,39 @@ void handleModeButton() {
   }
 
   if (!isPressed && wasPressed) {
-    if (millis() - pressStart < holdDelay) {
-      // Tap: Cycle through modes (0: lowercase, 1: uppercase, 2: numbers, 3: punctuation)
-      currentMode = (currentMode + 1) % 4;
-      Serial.print("Mode switched to: ");
-      Serial.println(getModeName(currentMode));
+    unsigned long pressDuration = millis() - pressStart;
+    
+    if (pressDuration < holdDelay) {
+      // First check if this is a double press
+      if (millis() - lastModePressTime < doublePressDelay && modeSinglePress) {
+        // Double press detected - ENTER
+        Serial.println("Enter");
+        modeSinglePress = false;
+        lastModePressTime = 0; // Reset to prevent accidental triple-press detection
+      } else {
+        // Not a double press (yet) - just record the press time
+        modeSinglePress = true;
+        lastModePressTime = millis();
+      }
     } else {
-      // Hold: Toggle caps lock (only in letter modes)
+      // Handle long press (caps lock toggle)
       if (currentMode == 0 || currentMode == 1) {
         capsLock = !capsLock;
-        currentMode = capsLock ? 1 : 0; // Switch between lowercase/uppercase lists
+        currentMode = capsLock ? 1 : 0;
         Serial.print("Caps Lock: ");
         Serial.println(capsLock ? "ON" : "OFF");
       }
+      modeSinglePress = false; // Cancel any pending double press
     }
     wasPressed = false;
+  }
+
+  // Handle single press mode change after double-press window expires
+  if (modeSinglePress && (millis() - lastModePressTime > doublePressDelay)) {
+    currentMode = (currentMode + 1) % 4;
+    Serial.print("Mode switched to: ");
+    Serial.println(getModeName(currentMode));
+    modeSinglePress = false;
   }
 }
 
@@ -127,7 +155,6 @@ void handleEscButton() {
   }
 }
 
-// Single definition of getModeName
 const char* getModeName(int mode) {
   switch (mode) {
     case 0: return "Lowercase Letters";
