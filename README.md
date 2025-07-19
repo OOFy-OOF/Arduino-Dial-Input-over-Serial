@@ -53,7 +53,7 @@ If you are unable to input the full range of characters (a-z), note that in the 
 <img width="935" height="120" alt="image" src="https://github.com/user-attachments/assets/4e2cce98-64a9-480f-8893-aa8f51043c65" />
 
 ### Still not working?
-Make sure no other program (for example, Arduino IDE) is accessing your COM port while trying to run the program; this will prevent it from receiving data.
+Make sure no other program (for example, Arduino IDE) is accessing your COM port while trying to run the program; this will prevent it from receiving data. Also make sure you don't already have an instance running.
 
 
 
