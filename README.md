@@ -10,4 +10,5 @@ The switches used in my example are Omron B3WNs and the potentiometer is a commo
 Only Windows support so far, executable builds are made using Auto py to exe.
 
 ## Troubleshooting:
+### Executable related:
 
