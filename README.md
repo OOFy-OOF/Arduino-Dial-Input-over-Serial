@@ -61,5 +61,5 @@ Make sure no other program (for example, Arduino IDE) is accessing your COM port
 * You tell me :D
 
 ## More Documentations:
-Refer to [Wiki](https://github.com/OOFy-OOF/Arduino-Dial-Input-over-Serial/wiki/Basic-info-AND-HOW-TO-USE)
+Refer to [Wiki](https://github.com/OOFy-OOF/Arduino-Dial-Input-over-Serial/wiki)
 
