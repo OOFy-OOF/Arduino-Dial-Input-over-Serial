@@ -17,7 +17,7 @@ Only Windows support for now, executable builds are made using [Auto-py-to-exe](
 
 <img width="1323" height="364" alt="image" src="https://github.com/user-attachments/assets/1b0d386e-fed3-4f9d-81d4-ec2456391a6b" />
 
-### 2. Unzip on your PC, you should find these files inside the folder inside:
+### 2. Unzip on your PC, you should find these files inside the folder:
 
 <img width="656" height="122" alt="image" src="https://github.com/user-attachments/assets/284212c5-e7a5-4128-89b3-05610174bf64" />
 
