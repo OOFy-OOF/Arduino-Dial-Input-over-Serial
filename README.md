@@ -55,5 +55,8 @@ If you are unable to input the full range of characters (a-z), note that in the 
 ### Still not working?
 Make sure no other program (for example, Arduino IDE) is accessing your COM port while trying to run the program; this will prevent it from receiving data. Also make sure you don't already have an instance running.
 
-
+## Known Issues:
+* Closing the settings menu without saving and restarting causes the UI to never time out.
+* Button gestures with MODE are jank because too many variations.
+* You tell me :D
 
