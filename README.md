@@ -60,3 +60,6 @@ Make sure no other program (for example, Arduino IDE) is accessing your COM port
 * Button gestures with MODE are jank because too many variations.
 * You tell me :D
 
+## More Documentations:
+Refer to [Wiki](https://github.com/OOFy-OOF/Arduino-Dial-Input-over-Serial/wiki/Basic-info-AND-HOW-TO-USE)
+
