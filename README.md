@@ -7,6 +7,7 @@ The switches used in my example are Omron B3WNs, and the potentiometer is a comm
 
 Only Windows support for now, executable builds are made using [Auto-py-to-exe](https://github.com/brentvollebregt/auto-py-to-exe).
 
+### Simulate on Tinkercad here: [link](https://www.tinkercad.com/things/fv0Ro02MSqS-arduino-dial-input-over-serial?sharecode=JySeBymt0gb-Ecbg5eRF3zyH4_SAuhMBrEvMna6M8d8)
 
 <br>
 
