@@ -38,7 +38,7 @@ Close the IDE when complete.
 ### Executable related:
 On first launch, if you receive the following error:
 
-<img width="323" height="201" alt="image" src="https://github.com/user-attachments/assets/1d38e424-69ac-4e34-940c-a5ff55e3184d" />
+<img width="228" height="172" alt="image" src="https://github.com/user-attachments/assets/603e99b2-4295-4e1e-9c62-d414f4ed4c34" />
 
 Please make sure you are using the correct COM port for your connection by changing it in the settings, then click restart. 
 
