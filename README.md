@@ -47,9 +47,7 @@ Please make sure you are using the correct COM port for your connection by chang
 You can check the COM port your Arduino is using in Arduino IDE.
 
 ### Set-up related:
-If you are unable to input the full range of characters (a-z), note that in the sketch (.ino) file for the Arduino, the potentiometer range is set from 0 to 670 for my particular setup. If you are using a different potentiometer, please change the range to something appropriate for your components. 
-
-<img width="935" height="120" alt="image" src="https://github.com/user-attachments/assets/4e2cce98-64a9-480f-8893-aa8f51043c65" />
+If you are unable to input the full range of characters (a-z), note that in the sketch (.ino) file for the Arduino, the potentiometer range is set from 0 to 670 for my particular setup. If you are using a different potentiometer, please change the range to something appropriate for your components. (Refer [here](https://github.com/OOFy-OOF/Arduino-Dial-Input-over-Serial/wiki#%EF%B8%8F-configuration-constants))
 
 ### Still not working?
 Make sure no other program (for example, Arduino IDE) is accessing your COM port while trying to run the program; this will prevent it from receiving data. Also make sure you don't already have an instance running.
