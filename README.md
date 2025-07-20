@@ -53,8 +53,9 @@ If you are unable to input the full range of characters (a-z), note that in the 
 Make sure no other program (for example, Arduino IDE) is accessing your COM port while attempting to run this program; this will prevent it from receiving data. Also, make sure you don't already have an instance running. If the window is hidden, just force close it in Task Manager.
 
 ## Known Issues:
-* Closing the settings menu without saving and restarting causes the UI to never time out.
+* ~~Closing the settings menu without saving and restarting causes the UI to never time out.~~ (fixed, now the main window hides itself anyways)
 * ~~Button gestures with MODE are jank because too many variations.~~ (Maybe fixed???)
+* buggy behaviour with window when waking from background
 * You tell me :D
 
 ## More Documentation:
