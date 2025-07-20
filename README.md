@@ -3,6 +3,7 @@ Fun little project for a simple scrolling input method using a potentiometer and
 
 The switches used in my example are Omron B3WNs, and the potentiometer is a common 10k ohm one (306E).
 
+<img width="1272" height="577" alt="Ingenious Maimu-Hillar" src="https://github.com/user-attachments/assets/8c8105c4-b208-4480-bcf9-43ddcfb9c58d" />
 
 Only Windows support for now, executable builds are made using [Auto-py-to-exe](https://github.com/brentvollebregt/auto-py-to-exe).
 
